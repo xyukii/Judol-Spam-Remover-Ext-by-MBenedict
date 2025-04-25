@@ -16,7 +16,7 @@
 
 ![Screenshot 2025-04-25 212315](https://github.com/user-attachments/assets/47f6780f-b777-4066-85f6-11d3c493e48b)
 
-Chapter 2 : OAuth Client
+### Chapter 2 : OAuth Client
 1. Ketik di google <strong><em>Google Cloud Console</em></strong>
 
 ![Screenshot 2025-04-25 210936](https://github.com/user-attachments/assets/5958933e-ce4b-4fdd-88a7-cf57c5d647f3)
@@ -45,7 +45,7 @@ Chapter 2 : OAuth Client
 
 13. Copy Client ID nya
 
-Chapter 3 : Last Chapter 
+### Chapter 3 : Last Chapter 
 1. Buka file extensionnya trus cari manifest.json 
 2. Buka manifest.json (BISA PAKE NOTEPAD)
 3. ganti client_id di bagian yang ini sama client ID yang tadi :
