@@ -51,6 +51,7 @@ Chapter 3 : Last Chapter
 3. ganti client_id di bagian yang ini sama client ID yang tadi :
 "oauth2": {
    "client_id": "YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com", <---- yang ini
+   
    "scopes": ["https://www.googleapis.com/auth/youtube.force-ssl"]
 },
 5. Di save habis itu masuk lagi ke chrome://extensions trus pencet tombol reload
