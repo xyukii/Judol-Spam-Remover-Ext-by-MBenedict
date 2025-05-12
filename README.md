@@ -2,6 +2,7 @@
 
 ### DISCLAIMER :
 - Extension ini tidak bisa jalan <strong><em>24 JAM</em></strong>. Kalo ada yang mau modif silahkan di fork.
+- Penggunaannya hanya untuk yang punya channel Youtube <strong><em>BUKAN VIEWERS</em></strong>, ntar error bingung lu malah.
 - Scan commentnya hanya di <strong><em>1 VIDEO</em></strong> bukan 1 channel.
 - <ins>Untuk penggunaan yang efektif, scroll dulu comment section sampai paling bawah karena youtube pake metode yang namanya <strong>LAZY LOADING</strong>. Yang gatau apa itu bisa baca [disini](https://www.jagoanhosting.com/blog/apa-itu-lazy-load/).</ins>
 
