@@ -18,7 +18,7 @@
 
 ![Screenshot 2025-05-12 160615](https://github.com/user-attachments/assets/4c02d01f-d41b-4af5-9563-57c4745d1c45)
 
-5. Pencet Load Unpacked trus pilih file tadi yang isinya hasil extract ZIP
+4. Pencet Load Unpacked trus pilih file tadi yang isinya hasil extract ZIP
 
 ![Screenshot 2025-05-12 160646](https://github.com/user-attachments/assets/90067721-7063-4912-a774-bb94fde3abc8)
 
