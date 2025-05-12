@@ -142,9 +142,9 @@ function deleteCommentsById(commentIds) {
 
         if (confirmBtn) {
             confirmBtn.click();
-            console.log("✅ Confirmed comment removal");
+            console.log("Confirmed comment removal");
         } else {
-            console.warn("⚠️ Could not find confirm button");
+            console.warn("Could not find confirm button");
         }
     }
 
