@@ -22,4 +22,4 @@
 
 ![Screenshot 2025-05-12 160646](https://github.com/user-attachments/assets/90067721-7063-4912-a774-bb94fde3abc8)
 
-### DAH SLESAI TUH JUDOL
+### DAH MYALAIN EXTENSIONNYA, SLESAI TUH JUDOL AHHH~~~~
