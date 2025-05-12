@@ -4,22 +4,22 @@
 - Extension ini tidak bisa jalan <strong><em>24 JAM</em></strong>. Kalo ada yang mau modif silahkan di fork.
 - Penggunaannya hanya untuk yang punya channel Youtube <strong><em>BUKAN VIEWERS</em></strong>, ntar error bingung lu malah.
 - Scan commentnya hanya di <strong><em>1 VIDEO</em></strong> bukan 1 channel.
-- <u>Untuk penggunaan yang efektif, scroll dulu comment section sampai paling bawah karena youtube pake metode yang namanya <strong>LAZY LOADING</strong>. Yang gatau apa itu bisa baca [disini](https://www.jagoanhosting.com/blog/apa-itu-lazy-load/).</u>
+- <ins>Untuk penggunaan yang efektif, scroll dulu comment section sampai paling bawah karena youtube pake metode yang namanya <strong>LAZY LOADING</strong>. Yang gatau apa itu bisa baca [disini](https://www.jagoanhosting.com/blog/apa-itu-lazy-load/).</ins>
 
 ***MIT LICENSE JADI UNTUK PARA DEVELOPER SILAHKAN DI FORK/CLONE DAN DIKEMBANGKAN (Kalo mau)***
 
 ### Chapter 1 : Setup
 1. Pencet tombol code warna hijau trus pencet <strong><em>Download ZIP</em></strong>
 
-![image](https://github.com/user-attachments/assets/ca73f12d-03c0-4f4d-beb7-138d983ff65d)
+![Screenshot 2025-05-12 160502](https://github.com/user-attachments/assets/959ed6d8-c777-4a5a-84a4-58b7c692ded6)
 
 2. Extract ZIPnya
 3. Buka Chrome trus ketik [chrome://extensions](chrome://extensions) trus developer mode di kanan atas dianyalain
 
-![image](https://github.com/user-attachments/assets/64570a1b-0415-4dd7-b7fe-3002f2002e0d)
+![Screenshot 2025-05-12 160615](https://github.com/user-attachments/assets/4c02d01f-d41b-4af5-9563-57c4745d1c45)
 
 5. Pencet Load Unpacked trus pilih file tadi yang isinya hasil extract ZIP
 
-![image](https://github.com/user-attachments/assets/b3de806e-fada-4df7-b5fd-54c32242206b)
+![Screenshot 2025-05-12 160646](https://github.com/user-attachments/assets/90067721-7063-4912-a774-bb94fde3abc8)
 
 ### DAH SLESAI TUH JUDOL
