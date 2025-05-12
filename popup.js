@@ -19,25 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         chrome.storage.local.set({ blockedWords: words });
     });
 
-    chrome.identity.getAuthToken({ interactive: false }, (token) => {
-        if (chrome.runtime.lastError || !token) {
-            status.textContent = 'You are not logged in';
-            loginBtn.style.display = 'block';
-        } else {
-            status.textContent = 'You are Logged in';
-            loginBtn.style.display = 'none';
-        }
-    });
-
-    loginBtn.onclick = () => {
-        chrome.identity.getAuthToken({ interactive: true }, (token) => {
-            if (token) {
-                status.textContent = 'You are Logged in';
-                loginBtn.style.display = 'none';
-            }
-        });
-    };
-
     scanBtn.onclick = () => {
         scanStatus.textContent = 'Scanning comments...';
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -98,7 +79,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert("No comments selected for deletion.");
             return;
         }
-        chrome.runtime.sendMessage({ action: 'deleteSelectedSpam', comments: toDelete });
+
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.scripting.executeScript({
+                target: { tabId: tabs[0].id },
+                func: deleteCommentsById,
+                args: [toDelete.map(c => c.id)]
+            });
+        });
     };
 });
 
@@ -123,4 +111,50 @@ function scrapeComments() {
 
         chrome.runtime.sendMessage({ action: 'foundComments', comments: data });
     }, 1000);
+}
+
+function deleteCommentsById(commentIds) {
+    async function deleteCommentById(commentId) {
+        const thread = Array.from(document.querySelectorAll("ytd-comment-thread-renderer"))
+            .find(t => {
+                const anchor = t.querySelector("a[href*='lc=']");
+                const id = anchor ? new URL(anchor.href).searchParams.get("lc") : null;
+                return id === commentId;
+            });
+
+        if (!thread) return;
+
+        const menuButton = thread.querySelector('#action-menu button');
+        if (!menuButton) return;
+        menuButton.click();
+
+        await new Promise(r => setTimeout(r, 300));
+
+        const menuItems = Array.from(document.querySelectorAll('tp-yt-paper-item'));
+        const removeItem = menuItems.find(item => item.innerText.toLowerCase().includes("remove"));
+        if (!removeItem) return;
+        removeItem.click();
+
+        await new Promise(r => setTimeout(r, 500)); // Wait for dialog to appear
+
+        const confirmBtn = Array.from(document.querySelectorAll('yt-confirm-dialog-renderer button'))
+            .find(btn => btn.innerText.toLowerCase().includes("remove"));
+
+        if (confirmBtn) {
+            confirmBtn.click();
+            console.log("✅ Confirmed comment removal");
+        } else {
+            console.warn("⚠️ Could not find confirm button");
+        }
+    }
+
+    (async () => {
+        for (const id of commentIds) {
+            await deleteCommentById(id);
+            await new Promise(r => setTimeout(r, 700)); // small delay between each deletion
+        }
+
+        chrome.runtime.sendMessage({ action: 'notify', message: 'Spam comments deleted' });
+        chrome.runtime.sendMessage({ action: 'reloadTab' });
+    })();
 }
