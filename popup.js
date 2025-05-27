@@ -131,14 +131,14 @@ function deleteCommentsById(commentIds) {
         await new Promise(r => setTimeout(r, 300));
 
         const menuItems = Array.from(document.querySelectorAll('tp-yt-paper-item'));
-        const removeItem = menuItems.find(item => item.innerText.toLowerCase().includes("remove"));
+        const removeItem = menuItems.find(item => item.innerText.toLowerCase().includes("delete"));
         if (!removeItem) return;
         removeItem.click();
 
         await new Promise(r => setTimeout(r, 500)); // Wait for dialog to appear
 
         const confirmBtn = Array.from(document.querySelectorAll('yt-confirm-dialog-renderer button'))
-            .find(btn => btn.innerText.toLowerCase().includes("remove"));
+            .find(btn => btn.innerText.toLowerCase().includes("delete"));
 
         if (confirmBtn) {
             confirmBtn.click();
