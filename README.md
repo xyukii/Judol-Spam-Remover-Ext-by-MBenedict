@@ -1,6 +1,10 @@
 # TUTORIAL MEMAKAI CHROME EXTENSION JUDOL SPAM REPORTER INI (FREE NO ROOT NO JAIL BREAK 🏛️)
 
-### DISCLAIMER :
+### FORKING DISCLAIMER!! :
+- Extension ini purely hanya fork dari MBenedict. Last Update ada di 30 Mei 2025.
+Further update tidak akan diapply.
+
+### DISCLAIMER ORIGINAL :
 - Extension ini tidak bisa jalan <strong><em>24 JAM</em></strong>. Kalo ada yang mau modif silahkan di fork.
 - Penggunaannya hanya untuk yang punya channel Youtube <strong><em>BUKAN VIEWERS</em></strong>, ntar error bingung lu malah.
 - Scan commentnya hanya di <strong><em>1 VIDEO</em></strong> bukan 1 channel.

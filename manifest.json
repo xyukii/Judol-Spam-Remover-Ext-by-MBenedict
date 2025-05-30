@@ -2,9 +2,14 @@
   "manifest_version": 3,
   "name": "Judol Spam Remover",
   "version": "1.1",
-  "description": "Membasmi Komen Spam Judol di Video Youtube.",
-  "permissions": ["scripting", "storage"],
-  "host_permissions": ["https://www.youtube.com/*"],
+  "description": "Membasmi Komen Spam Judol di Video Youtube. by MBenedict & Published by Yukii Sanctuary",
+  "permissions": [
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -18,8 +23,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/watch?v=*"],
-      "js": ["content.js"]
+      "matches": [
+        "https://www.youtube.com/watch?v=*"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ]
 }
